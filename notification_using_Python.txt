@@ -1,0 +1,14 @@
+from plyer import notification
+import time
+import pygame
+pygame.mixer.init()
+title = 'notification'
+message = 'This is a notification'
+sound_file ="C:/Users/ankit/Downloads/Jab Saiyaan - Gangubai.mp3"
+while True:
+    notification.notify(title=title, message=message)
+    sound = pygame.mixer.Sound(sound_file)
+    time.sleep(2)
+    sound.play()
+    time.sleep(sound.get_length())
+    break
